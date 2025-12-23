@@ -110,7 +110,7 @@ static struct llvm::RegisterStandardPasses
 
   
 
-###0-day vulnerability 
+### 0-day vulnerability 
 Figure 1 shows a code snippet from **cyclonedds** where a stack buffer overflow occurs in `strlcpy`. When `identifier` has exactly `IDMAX = 1024` characters, `sizeof(macroname)` is 1025 while `strlen(identifier)` returns 1024. As `size > len` evaluates to true, `size` becomes `len + 1 = 1025`. The call to `memcpy(dest, src, size)` thus copies 1025 bytes. The subsequent write `dest[size] = '\0'` attempts to access `dest[1025]`, which exceeds the allocated buffer and triggers a stack buffer overflow. This vulnerability can result in memory corruption and unpredictable program behavior. Both sampling and solving RB branches are able to directly trigger this crash.
 
 ```c
@@ -133,7 +133,7 @@ size_t strlcpy(char* dest, char* src, size_t size)
 
 
 
-### Vulnerability by solving RB
+### Vulnerability Triggered via sampling
 
 #### 1. Pointer Definitions
 ```c
@@ -221,7 +221,7 @@ bfd_getl32(const void *p)
 ```
 
 
-## 7. Binary File Contents
+
 
 ### Crash Binary:
 ```
