@@ -6,20 +6,20 @@ S2F is built on AFL and SymCC
 #### Download the  docker image:
 
 ```bash
-docker pull  S2F
+docker pull  S2F-artifacts-image
 ```
 
 #### After pulling the image, verify it with:
 ```
 $ docker images -a
 REPOSITORY              TAG    IMAGE ID       CREATED          SIZE
-XXXX                     v3     a0be2fab59d2   2 hours ago      13.08GB
+S2F-artifacts-image                   v3     a0be2fab59d2   2 hours ago      13.08GB
 ```
 
 #### Run the container in interactive mode:
 
 ```bash
-sudo docker run -it S2F bash
+sudo docker run -it S2F-artifacts-image bash
 ```
  CPU Binding for Fuzzing in Docker
 
