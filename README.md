@@ -1,7 +1,7 @@
 
 # S2F-artifacts
 
-S2F has been commercialized and is therefore not available as open-source software. We will release a Docker image by January 1, 2026.
+S2F has been commercialized and is therefore not available as open-source software. We will release a Docker image by January 15, 2026.
 ## Docker Environment
 
 #### Download the  docker image:
