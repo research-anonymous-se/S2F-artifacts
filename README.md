@@ -1,26 +1,26 @@
 
 # S2F-artifacts
 
-S2F has been commercialized and is therefore not available as open-source software. We will release a Docker image by January 15, 2026.
+
 ## Docker Environment
 
 #### Download the  docker image:
 
 ```bash
-docker pull  S2F-artifacts-image
+docker pull  aahri/hybrid-s2f-aahri:aahri
 ```
 
 #### After pulling the image, verify it with:
 ```
 $ docker images -a
 REPOSITORY              TAG    IMAGE ID       CREATED          SIZE
-S2F-artifacts-image     v3     a0be2fab59d2   2 hours ago      13.08GB
+aahri/hybrid-s2f-aahri  aahri  a0be2fab59d2   2 hours ago      7.04GB
 ```
 
 #### Run the container in interactive mode:
 
 ```bash
-sudo docker run -it S2F-artifacts-image bash
+sudo docker run -it aahri/hybrid-s2f-aahri:aahri bash
 ```
  CPU Binding for Fuzzing in Docker
 
